@@ -1,0 +1,382 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D5EC514-0326-4BD5-A433-35C5E2825811}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Club_de_Lectura</RootNamespace>
+    <AssemblyName>Club_de_Lectura</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44355</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\GenericoAdmin\StyleSheet1.css" />
+    <Content Include="App_Themes\InicioA\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme1\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme2\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme3\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme4\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme5\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme8\StyleSheet1.css" />
+    <Content Include="CrearSalaU.aspx" />
+    <Content Include="CRUDLibrosAdmin.aspx" />
+    <Content Include="CRUDSalasAdmin.aspx" />
+    <Content Include="CRUDTemasAdmin.aspx" />
+    <Content Include="CRUDUsuariosAdmin.aspx" />
+    <Content Include="DetallesRU.aspx" />
+    <Content Include="InicioAdmin.aspx" />
+    <Content Include="InicioUsuario.aspx" />
+    <Content Include="LoginAdmin.aspx" />
+    <Content Include="MisSalasU.aspx" />
+    <Content Include="NuevaReunionU.aspx" />
+    <Content Include="NuevoUsuario.aspx" />
+    <Content Include="PerfilU.aspx" />
+    <Content Include="Recursos\ClubDeLectura.jpg" />
+    <Content Include="Recursos\ClubDeLectura2.jpg" />
+    <Content Include="Recursos\generos.png" />
+    <Content Include="Recursos\libro.png" />
+    <Content Include="Recursos\libros.png" />
+    <Content Include="Recursos\registros.png" />
+    <Content Include="Recursos\reunion.png" />
+    <Content Include="Recursos\reunion2.png" />
+    <Content Include="Recursos\reunion3.png" />
+    <Content Include="Recursos\temas1.png" />
+    <Content Include="Recursos\usuario.png" />
+    <Content Include="UnirseSalaU.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="UsuarioLogin.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionBD.cs" />
+    <Compile Include="CrearSalaU.aspx.cs">
+      <DependentUpon>CrearSalaU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearSalaU.aspx.designer.cs">
+      <DependentUpon>CrearSalaU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearSalaU.Master.cs">
+      <DependentUpon>CrearSalaU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearSalaU.Master.designer.cs">
+      <DependentUpon>CrearSalaU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDLibrosAdmin.aspx.cs">
+      <DependentUpon>CRUDLibrosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDLibrosAdmin.aspx.designer.cs">
+      <DependentUpon>CRUDLibrosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDLibrosAdmin.Master.cs">
+      <DependentUpon>CRUDLibrosAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDLibrosAdmin.Master.designer.cs">
+      <DependentUpon>CRUDLibrosAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDSalasAdmin.aspx.cs">
+      <DependentUpon>CRUDSalasAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDSalasAdmin.aspx.designer.cs">
+      <DependentUpon>CRUDSalasAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDSalasAdmin.Master.cs">
+      <DependentUpon>CRUDSalasAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDSalasAdmin.Master.designer.cs">
+      <DependentUpon>CRUDSalasAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDTemasAdmin.aspx.cs">
+      <DependentUpon>CRUDTemasAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDTemasAdmin.aspx.designer.cs">
+      <DependentUpon>CRUDTemasAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDTemasAdmin.Master.cs">
+      <DependentUpon>CRUDTemasAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDTemasAdmin.Master.designer.cs">
+      <DependentUpon>CRUDTemasAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDUsuariosAdmin.aspx.cs">
+      <DependentUpon>CRUDUsuariosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDUsuariosAdmin.aspx.designer.cs">
+      <DependentUpon>CRUDUsuariosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDUsuariosAdmin.Master.cs">
+      <DependentUpon>CRUDUsuariosAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDUsuariosAdmin.Master.designer.cs">
+      <DependentUpon>CRUDUsuariosAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesRU.aspx.cs">
+      <DependentUpon>DetallesRU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesRU.aspx.designer.cs">
+      <DependentUpon>DetallesRU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesRU.Master.cs">
+      <DependentUpon>DetallesRU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetallesRU.Master.designer.cs">
+      <DependentUpon>DetallesRU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdmin.aspx.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioAdmin.aspx.designer.cs">
+      <DependentUpon>InicioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioAdmin.Master.cs">
+      <DependentUpon>InicioAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioAdmin.Master.designer.cs">
+      <DependentUpon>InicioAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InicioUsuario.aspx.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioUsuario.aspx.designer.cs">
+      <DependentUpon>InicioUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioUsuario.Master.cs">
+      <DependentUpon>InicioUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioUsuario.Master.designer.cs">
+      <DependentUpon>InicioUsuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.designer.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.Master.cs">
+      <DependentUpon>LoginAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.Master.designer.cs">
+      <DependentUpon>LoginAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MisSalasU.aspx.cs">
+      <DependentUpon>MisSalasU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisSalasU.aspx.designer.cs">
+      <DependentUpon>MisSalasU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisSalasU.Master.cs">
+      <DependentUpon>MisSalasU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisSalasU.Master.designer.cs">
+      <DependentUpon>MisSalasU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaReunionU.aspx.cs">
+      <DependentUpon>NuevaReunionU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaReunionU.aspx.designer.cs">
+      <DependentUpon>NuevaReunionU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaReunionU.Master.cs">
+      <DependentUpon>NuevaReunionU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaReunionU.Master.designer.cs">
+      <DependentUpon>NuevaReunionU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.aspx.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.aspx.designer.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.Master.cs">
+      <DependentUpon>NuevoUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Master.designer.cs">
+      <DependentUpon>NuevoUsuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilU.aspx.cs">
+      <DependentUpon>PerfilU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilU.aspx.designer.cs">
+      <DependentUpon>PerfilU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilU.Master.cs">
+      <DependentUpon>PerfilU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilU.Master.designer.cs">
+      <DependentUpon>PerfilU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoginU.Master.cs">
+      <DependentUpon>LoginU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginU.Master.designer.cs">
+      <DependentUpon>LoginU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UnirseSalaU.aspx.cs">
+      <DependentUpon>UnirseSalaU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnirseSalaU.aspx.designer.cs">
+      <DependentUpon>UnirseSalaU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnirseSalaU.Master.cs">
+      <DependentUpon>UnirseSalaU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnirseSalaU.Master.designer.cs">
+      <DependentUpon>UnirseSalaU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioLogin.aspx.cs">
+      <DependentUpon>UsuarioLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioLogin.aspx.designer.cs">
+      <DependentUpon>UsuarioLogin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InicioUsuario.Master" />
+    <Content Include="CrearSalaU.Master" />
+    <Content Include="MisSalasU.Master" />
+    <Content Include="NuevaReunionU.Master" />
+    <Content Include="DetallesRU.Master" />
+    <Content Include="LoginAdmin.Master" />
+    <Content Include="InicioAdmin.Master" />
+    <Content Include="NuevoUsuario.Master" />
+    <Content Include="CRUDUsuariosAdmin.Master" />
+    <Content Include="CRUDSalasAdmin.Master" />
+    <Content Include="CRUDTemasAdmin.Master" />
+    <Content Include="CRUDLibrosAdmin.Master" />
+    <None Include="packages.config" />
+    <Content Include="LoginU.Master" />
+    <Content Include="PerfilU.Master" />
+    <Content Include="UnirseSalaU.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52118</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44355/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

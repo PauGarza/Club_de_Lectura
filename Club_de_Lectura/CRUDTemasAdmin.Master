@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CRUDTemasAdmin.master.cs" Inherits="Club_de_Lectura.CRUDTemasAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div id="Cabecera">
+            <div id="CabeceraD">
+                <p>
+                    <image src="/Recursos/libro.png" style="width: 30px; height: 30px;" />
+                    <b>Club de Lectura</b>
+                </p>
+            </div>
+            <div id="CabeceraI">
+                <asp:ContentPlaceHolder ID="Cab" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="Contenido">
+            <asp:ContentPlaceHolder ID="Cont" runat="server">
+                </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

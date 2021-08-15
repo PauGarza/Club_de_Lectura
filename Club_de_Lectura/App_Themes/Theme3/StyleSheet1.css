@@ -1,0 +1,56 @@
+﻿body {
+}
+#Cabecera {
+    width:100%;
+    height:30%;
+    background-color:aqua;
+    margin:0%;
+    padding:0%;
+    float:none;
+    overflow:auto;
+}
+#CabeceraD {
+    margin: 20px;
+    background-color:aliceblue;
+    height: 27%;
+    width: 30%;
+    float: left;
+}
+#CabeceraD b {
+    margin: 10px;
+    font-size: 32px;
+}
+#CabeceraD img{
+    margin-left:15px;
+}
+
+#CabeceraI {
+    margin: 20px;
+    padding:15px;
+    float: right;
+    height: 50%;
+    width: 18%;
+    background-color: aliceblue;
+    text-align:center;
+}
+
+#Contenido {
+    align-self: center;
+    background-color: lavenderblush;
+    margin-top:5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 80%;
+    width: 80%;
+    overflow:auto;
+}
+    #Contenido table {
+        text-align: center;
+        height:70%;
+        width:55%;
+        border:5px solid;
+    }
+    #Contenido table tr td{
+        text-align: center;
+
+    }

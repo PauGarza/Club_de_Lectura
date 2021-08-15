@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="InicioAdmin.master.cs" Inherits="Club_de_Lectura.InicioAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Cabecera">
+            <div id="CabeceraD">
+                <p>
+                    <image src="/Recursos/libro.png" style="width: 30px; height: 30px;" />
+                    <b>Club de Lectura</b>
+                </p>
+            </div>
+            <div id="CabeceraI">
+                <asp:ContentPlaceHolder ID="Cab" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+        <div id="Contenido">
+            <table align="center">
+                <tr>
+                    <td><image src="/Recursos/usuario.png" width="300px" heigth="700px"></td>
+                    <td><image src="/Recursos/reunion.png" width="300px" heigth="700px"></td>
+                    <td><image src="/Recursos/libros.png" width="300px" heigth="700px"></td>
+                </tr>
+                <tr>
+                    <td><asp:ContentPlaceHolder ID="bt1" runat="server">
+            </asp:ContentPlaceHolder></td>
+                    <td><asp:ContentPlaceHolder ID="bt2" runat="server">
+            </asp:ContentPlaceHolder></td>
+                    <td><asp:ContentPlaceHolder ID="bt3" runat="server">
+            </asp:ContentPlaceHolder></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><image src="/Recursos/temas1.png" width="300px" heigth="700px"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><asp:ContentPlaceHolder ID="bt5" runat="server">
+            </asp:ContentPlaceHolder></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
